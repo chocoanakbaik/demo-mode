@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#090d16">
+<meta name="description" content="Interactive browser security scenarios for ChocoScan testing."><title>Threat Lab | ChocoScan</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/app.js" defer></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#" aria-label="Threat Lab home"><span class="brand-mark">C</span><span>ChocoScan <small>THREAT LAB</small></span></a><div class="top-status"><span class="pulse"></span> LAB ENVIRONMENT <span class="status-divider">/</span> SESSION ACTIVE</div><a class="exit-link" href="#scenarios">Scenario library <span>↗</span></a></header>
+<main>
+<section class="hero"><div class="eyebrow"><span class="eyebrow-line"></span> BROWSER THREAT RESEARCH</div><h1>See the threat.<br><span>Understand the signal.</span></h1><p class="hero-copy">Interactive web threat scenarios built to exercise detection workflows, suspicious UI patterns, and browser-level warning signals.</p><div class="hero-meta"><span><i class="dot dot-green"></i> ISOLATED SESSION</span><span>NO CREDENTIAL STORAGE</span><span>LOCAL INTERACTIONS ONLY</span></div></section>
+<section class="lab-layout" id="scenarios">
+<aside class="scenario-panel"><div class="panel-heading"><span>SCENARIO LIBRARY</span><span class="count">04</span></div>
+<button class="scenario active" data-scenario="account" aria-pressed="true"><span class="scenario-icon">◈</span><span class="scenario-text"><b>Account verification</b><small>Credential lure · High risk</small></span><span class="chevron">›</span></button>
+<button class="scenario" data-scenario="update" aria-pressed="false"><span class="scenario-icon">⬇</span><span class="scenario-text"><b>Urgent browser update</b><small>Fake download prompt · High risk</small></span><span class="chevron">›</span></button>
+<button class="scenario" data-scenario="redirect" aria-pressed="false"><span class="scenario-icon">↗</span><span class="scenario-text"><b>Redirect chain</b><small>Navigation pressure · Medium risk</small></span><span class="chevron">›</span></button>
+<button class="scenario" data-scenario="popup" aria-pressed="false"><span class="scenario-icon">▣</span><span class="scenario-text"><b>Popup pressure</b><small>Deceptive alert pattern · Medium risk</small></span><span class="chevron">›</span></button>
+<div class="panel-note"><span class="note-shield">⬡</span><div><b>Contained by design</b><p>Actions are simulated. No data is transmitted and no file is downloaded.</p></div></div></aside>
+<section class="preview-panel"><div class="preview-toolbar"><div class="window-controls"><i></i><i></i><i></i></div><div class="address-bar"><span class="lock">⌕</span><span id="addressText">secure-account-check.example.test/verify</span><span class="address-flag">UNTRUSTED PATTERN</span></div><button class="refresh" id="resetScenario" title="Reset scenario" aria-label="Reset scenario">↻</button></div><div class="preview-content" id="scenarioStage" aria-live="polite"></div><div class="preview-footer"><span><i class="dot dot-amber"></i> SIMULATED PAGE</span><span id="scenarioCounter">SCENARIO 01 / 04</span><span>LOCAL ONLY</span></div></section>
+</section>
+<section class="signals-section"><div class="section-heading"><div><div class="eyebrow">DETECTION SURFACE</div><h2>Patterns worth inspecting</h2></div><p>These scenarios provide visible test signals. Run the page or its source through your scanner separately to evaluate what it flags.</p></div>
+<div class="signal-grid"><article class="signal-card"><span class="signal-number">01</span><div class="signal-icon">⌁</div><h3>Identity deception</h3><p>Brand imitation, urgency language, and forms requesting sensitive account details.</p><span class="tag tag-high">HIGH RISK SIGNAL</span></article>
+<article class="signal-card"><span class="signal-number">02</span><div class="signal-icon">⇩</div><h3>Download pressure</h3><p>Fake update prompts and executable-style download calls to action.</p><span class="tag tag-high">HIGH RISK SIGNAL</span></article>
+<article class="signal-card"><span class="signal-number">03</span><div class="signal-icon">⤴</div><h3>Navigation tricks</h3><p>Unexpected destination changes, chained redirects, and confusing URL presentation.</p><span class="tag tag-medium">MEDIUM RISK SIGNAL</span></article></div></section>
+</main>
+<footer class="footer"><span>CHOCOscan <span class="footer-muted">/ THREAT LAB</span></span><span>THE CHOCO STUDIOS</span><span>BUILT FOR CONTROLLED SECURITY TESTING</span></footer><div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body></html>
